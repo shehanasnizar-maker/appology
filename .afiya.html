@@ -1,0 +1,790 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Afiyaaaa Babuu ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #ffd6e7, #fff0f6);
+            color: #555;
+            overflow-x: hidden;
+        }
+
+        /* FLOATING HEARTS */
+
+        .hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -60px;
+            color: rgba(214, 51, 108, 0.3);
+            font-size: 25px;
+            animation: float 9s linear infinite;
+        }
+
+        .heart:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 40%;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(4) {
+            left: 65%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(5) {
+            left: 85%;
+            animation-delay: 5s;
+        }
+
+        .heart:nth-child(6) {
+            left: 95%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+
+        /* GENERAL */
+
+        .page {
+            min-height: 100vh;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+
+        /* LOGIN */
+
+        #loginPage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 420px;
+            padding: 45px 30px;
+            background: rgba(255,255,255,0.94);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(180,70,110,0.2);
+        }
+
+        .login-heart {
+            font-size: 65px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .login-box h1 {
+            color: #d6336c;
+            margin: 15px 0;
+        }
+
+        .login-box p {
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ffc1d6;
+            border-radius: 14px;
+            font-size: 16px;
+            outline: none;
+            margin-bottom: 15px;
+        }
+
+        input:focus {
+            border-color: #d6336c;
+        }
+
+
+        /* BUTTON */
+
+        button {
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            background: #d6336c;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #b92558;
+            transform: scale(1.05);
+        }
+
+
+        /* APOLOGY */
+
+        #apologyPage {
+            display: none;
+        }
+
+        .main-heart {
+            font-size: 75px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .title {
+            color: #d6336c;
+            font-size: clamp(40px, 8vw, 65px);
+            margin: 15px 0;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #888;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.94);
+            border-radius: 25px;
+            padding: 40px 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 45px rgba(180,70,110,0.15);
+            text-align: left;
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .quote {
+            text-align: center;
+            color: #d6336c;
+            font-size: 22px;
+            font-weight: bold;
+            font-style: italic;
+            margin: 30px 0;
+            padding: 20px;
+        }
+
+        .next-area {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+
+        /* SECOND EMOTIONAL PAGE */
+
+        #emotionalPage {
+            display: none;
+        }
+
+        .emotional-title {
+            color: #d6336c;
+            font-size: clamp(35px, 7vw, 58px);
+            margin-bottom: 10px;
+        }
+
+        .emotional-subtitle {
+            color: #888;
+            font-size: 19px;
+            margin-bottom: 40px;
+        }
+
+        .emotional-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 25px;
+            padding: 35px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 45px rgba(180,70,110,0.14);
+            text-align: center;
+        }
+
+        .emotional-card h2 {
+            color: #d6336c;
+            margin-bottom: 20px;
+        }
+
+        .emotional-card p {
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .big-quote {
+            font-size: 24px;
+            color: #d6336c;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .love-list {
+            text-align: left;
+            line-height: 2;
+            margin-top: 20px;
+        }
+
+        .love-list div {
+            margin: 8px 0;
+        }
+
+        .final {
+            padding: 45px 25px;
+            background: rgba(255,255,255,0.96);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(180,70,110,0.18);
+        }
+
+        .final h2 {
+            color: #d6336c;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .final p {
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-style: italic;
+            color: #999;
+            font-size: 18px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .page {
+                padding: 40px 15px;
+            }
+
+            .login-box {
+                padding: 35px 22px;
+            }
+
+            .card,
+            .emotional-card {
+                padding: 28px 20px;
+            }
+
+            .quote,
+            .big-quote {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FLOATING HEARTS -->
+
+    <div class="hearts">
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+    </div>
+
+
+    <!-- ==========================================
+         PAGE 1 — DOB
+    =========================================== -->
+
+    <section id="loginPage" class="page">
+
+        <div class="login-box">
+
+            <div class="login-heart">💗</div>
+
+            <h1>Hey, Afiyaaaa Babuu 🥺</h1>
+
+            <p>
+                I made something special for you...
+                <br><br>
+                But first, prove that you're my
+                <b>special person</b>. ❤️
+            </p>
+
+            <input type="date" id="dob">
+
+            <button onclick="checkDOB()">
+                Enter My Heart 💕
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         PAGE 2 — APOLOGY
+    =========================================== -->
+
+    <section id="apologyPage" class="page">
+
+        <div class="container">
+
+            <div class="main-heart">💔</div>
+
+            <h1 class="title">
+                I'm Sorry,
+                Afiyaaaa Babuu
+            </h1>
+
+            <p class="subtitle">
+                Please read this with your heart... ❤️
+            </p>
+
+
+            <div class="card">
+
+                <p>
+                    Afiyaaaa Babuu...
+                </p>
+
+                <p>
+                    I don't even know where to start because there are
+                    so many things I want to tell you.
+                </p>
+
+                <p>
+                    First of all,
+                    <b>I'm really, really sorry.</b>
+                </p>
+
+                <p>
+                    What I did was my mistake. I accept it.
+                    I don't want to make excuses. I don't want to
+                    blame anything or anyone else.
+                </p>
+
+                <div class="quote">
+                    "Sometimes we realize the value of a moment
+                    only after we've turned it into a memory."
+                </div>
+
+                <p>
+                    I wish I could go back to that moment and change
+                    what happened. I wish I could take away the sadness
+                    I caused you.
+                </p>
+
+                <p>
+                    But I can't change the past.
+                    All I can do is learn from it, become better,
+                    and show you that I'm genuinely sorry.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="quote">
+                    "I'm sorry for the moment I made you feel
+                    like you weren't important to me."
+                </div>
+
+                <p>
+                    Because the truth is...
+                    <b>you are important to me.</b>
+                </p>
+
+                <p>
+                    More than I sometimes know how to explain.
+                    More than words can properly describe.
+                </p>
+
+                <p>
+                    Your smile matters to me.
+                    Your happiness matters to me.
+                    Your tears matter to me.
+                    And your heart matters to me.
+                </p>
+
+                <div class="quote">
+                    "I may not be perfect,
+                    but my feelings for you are real."
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <p>
+                    Afiyaaaa Babuu,
+                    I don't want one mistake to become the reason
+                    we forget all the beautiful moments we've shared.
+                </p>
+
+                <p>
+                    I don't want you to remember me only for the moment
+                    I hurt you.
+                </p>
+
+                <p>
+                    I want to become someone who makes you feel safe,
+                    loved, respected and appreciated.
+                </p>
+
+                <div class="quote">
+                    "The person who truly loves you will care
+                    when they hurt you."
+                </div>
+
+                <p>
+                    And I care.
+                </p>
+
+                <p>
+                    So much.
+                </p>
+
+            </div>
+
+
+            <div class="next-area">
+
+                <button onclick="showEmotionalPage()">
+                    Read More, Babuu ❤️
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         PAGE 3 — DEEP EMOTIONAL PAGE
+    =========================================== -->
+
+    <section id="emotionalPage" class="page">
+
+        <div class="container">
+
+            <div class="main-heart">❤️</div>
+
+            <h1 class="emotional-title">
+                Afiyaaaa Babuu...
+            </h1>
+
+            <p class="emotional-subtitle">
+                There are some things I really need you to know.
+            </p>
+
+
+            <div class="emotional-card">
+
+                <h2>🥺 Please Believe Me</h2>
+
+                <p class="big-quote">
+                    "If I could turn back time,
+                    I would choose your smile over my mistake
+                    every single time."
+                </p>
+
+            </div>
+
+
+            <div class="emotional-card">
+
+                <h2>💗 You Mean So Much To Me</h2>
+
+                <p>
+                    Afiyaaaa Babuu,
+                    you're not just someone I talk to.
+                    You're someone who became a part of my everyday life,
+                    my thoughts, my happiness and my heart.
+                </p>
+
+                <div class="love-list">
+
+                    <div>❤️ Your smile makes my day better.</div>
+
+                    <div>❤️ Your voice makes everything feel okay.</div>
+
+                    <div>❤️ Your little habits make you special.</div>
+
+                    <div>❤️ Your happiness means more to me than you know.</div>
+
+                    <div>❤️ Even the smallest moments with you matter to me.</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="emotional-card">
+
+                <h2>💔 About My Mistake</h2>
+
+                <p>
+                    I know saying "sorry" is easy.
+                    Changing is harder.
+                </p>
+
+                <p>
+                    That's why I don't want this page to just be
+                    a collection of words.
+                </p>
+
+                <p>
+                    I want my actions from now on to show you
+                    that I really understood my mistake.
+                </p>
+
+                <div class="quote">
+                    "A sincere apology isn't about saying
+                    the perfect words. It's about understanding
+                    the pain you caused."
+                </div>
+
+            </div>
+
+
+            <div class="emotional-card">
+
+                <h2>🤍 My Promise</h2>
+
+                <p>
+                    I promise to listen more.
+                    <br>
+                    I promise to think before I act.
+                    <br>
+                    I promise to respect your feelings.
+                    <br>
+                    I promise to communicate instead of hurting you.
+                    <br>
+                    I promise to learn.
+                    <br>
+                    And I promise to keep trying.
+                </p>
+
+                <div class="quote">
+                    "I can't promise I'll never make another mistake,
+                    but I can promise I'll always try to become better."
+                </div>
+
+            </div>
+
+
+            <div class="emotional-card">
+
+                <h2>🥹 One Last Thing...</h2>
+
+                <p>
+                    Afiyaaaa Babuu,
+                    if you're reading this,
+                    please know that every word here is coming
+                    from a heart that genuinely regrets hurting you.
+                </p>
+
+                <br>
+
+                <p>
+                    I'm sorry for making you sad.
+                </p>
+
+                <p>
+                    I'm sorry for disappointing you.
+                </p>
+
+                <p>
+                    I'm sorry for my mistake.
+                </p>
+
+                <p>
+                    I'm sorry for the tears.
+                </p>
+
+                <br>
+
+                <p class="big-quote">
+                    "I'm sorry, my Afiyaaaa Babuu.
+                    I really, really am."
+                </p>
+
+            </div>
+
+
+            <div class="final">
+
+                <h2>
+                    Can you forgive me? 🥺❤️
+                </h2>
+
+                <p>
+                    You don't have to answer immediately.
+                    You don't have to forget everything.
+                    Take your time.
+                </p>
+
+                <br>
+
+                <p>
+                    I just wanted you to know...
+                </p>
+
+                <br>
+
+                <p class="big-quote">
+                    "No matter how many words I write,
+                    they will never be enough to say
+                    how sorry I am."
+                </p>
+
+                <div class="signature">
+
+                    With all my heart,<br><br>
+
+                    <b>
+                        Your sorry boy ❤️
+                       <button onclick="showChancePage()">
+    One More Thing, Afiyaaaa ❤️
+</button>
+</button>
+                    </b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    ```html
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script>
+
+        function checkDOB() {
+
+            const enteredDOB =
+                document.getElementById("dob").value;
+
+            // ONLY 25/03/2010 WILL WORK
+            const correctDOB = "2010-03-25";
+
+
+            if (enteredDOB === correctDOB) {
+
+                document.getElementById("message").innerHTML =
+                    "I knew it was you, Afiyaaaa Babuu... ❤️";
+
+                setTimeout(function() {
+
+                    document.getElementById("loginPage").style.display =
+                        "none";
+
+                    document.getElementById("apologyPage").style.display =
+                        "block";
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }, 1200);
+
+            } else {
+
+                document.getElementById("message").innerHTML =
+                    "Hmm... that's not your birthday 🥺💕";
+
+            }
+
+        }
+
+
+        function showEmotionalPage() {
+
+            document.getElementById("apologyPage").style.display =
+                "none";
+
+            document.getElementById("emotionalPage").style.display =
+                "block";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
